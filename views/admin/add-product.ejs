@@ -1,0 +1,41 @@
+<%- include('../includes/head.ejs') %>
+
+<body>
+
+    <%- include('../includes/navigation.ejs') %>
+
+    <main>
+        <section class="container mt-5">
+            <section class="card">
+                <section class="card-body p-5">
+                    <form action="/admin/add-product" method="POST">
+                        <fieldset>
+                            <section class="form-group">
+                                <label for="title">Title</label>
+                                <input name="item" type="text" class="form-control" id="item"
+                                    placeholder="Enter item name">
+                            </section>
+                            <section class="form-group">
+                                <label for="imageURL">Image URL</label>
+                                <input name="imageUrl" type="text" class="form-control" id="imageUrl"
+                                    placeholder="Enter Image URL">
+                            </section>
+                            <section class="form-group">
+                                <label for="price">Price</label>
+                                <input name="price" type="number" class="form-control" id="price"
+                                    placeholder="Enter Price" step="0.01">
+                            </section>
+                            <section class="form-group">
+                                <label for="description">Description</label>
+                                <textarea name="description" class="form-control" id="description"
+                                    placeholder="Enter Description"></textarea>
+                            </section>
+                            <button type="submit" class="btn btn-primary">Add Product</button>
+                        </fieldset>
+                    </form>
+                </section>
+            </section>
+        </section>
+    </main>
+
+    <%- include('../includes/end.ejs') %>
